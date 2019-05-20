@@ -1,0 +1,8 @@
+.notification{
+  &.alert{
+    top: 50px;
+    right: 50px;
+    z-index: 1;
+    position: fixed;
+  }
+}
