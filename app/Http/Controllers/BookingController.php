@@ -20,9 +20,10 @@ class BookingController extends Controller
      * Add new booking.
      *
      * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
-    public function add(Request $request) : JsonResponse {
+    public function add(Request $request) : JsonResponse
+    {
 
         $errors = [];
         $errorsCount = 0;
@@ -110,9 +111,10 @@ class BookingController extends Controller
     /**
      * Getting initial data
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
-    public function getInitialData() : JsonResponse {
+    public function getInitialData() : JsonResponse
+    {
 
         $workshop = Workshop::get();
         return $this->buildResponse(200, ['workshops' => $workshop]);

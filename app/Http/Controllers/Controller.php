@@ -18,9 +18,10 @@ class Controller extends BaseController
      * @param integer $status
      * @param array $results
      * @param array $errors
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
-    protected function buildResponse($status, $results = [], $errors = []) : JsonResponse {
+    protected function buildResponse($status, $results = [], $errors = []) : JsonResponse
+    {
         $response = [
             'errors' => $errors,
             'results' => $results
