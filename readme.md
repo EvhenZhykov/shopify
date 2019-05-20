@@ -1,6 +1,6 @@
-##Booking Workshops
+## Booking Workshops
 
-####Installation
+#### Installation
 
 For correct installation, your server must have > PHP 7.1 and Composer installed.
 To install, do the following:
