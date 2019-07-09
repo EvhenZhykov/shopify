@@ -37,7 +37,8 @@ class BookingController extends Controller
             'name.required'       => 'Please fill in the name field!',
             'phone.required'      => 'Please fill in the phone field!',
             'workshopId.required' => 'Please fill in the workshop field!',
-            'email.required'      => 'Please fill in the email field!'
+            'email.required'      => 'Please fill in the email field!',
+            'email.unique'        => 'This email is already registered',
         ];
         $customerValidator = Validator::make($customer, [
             'name'       => 'required',
@@ -55,7 +56,7 @@ class BookingController extends Controller
             foreach ($input['guests'] as $index => $guest){
                 $guestValidator = Validator::make($guest, [
                     'name'  => 'required',
-                    'email' => 'required'
+                    'email' => 'required|unique:users|email'
                 ], $messages);
 
                 if($guestValidator->fails()){
